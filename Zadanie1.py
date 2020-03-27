@@ -9,11 +9,10 @@ while True:
 		length_of_list = int(received_line)
 		if length_of_list > 0:
 			random_list = []
-			while length_of_list > 0:
+			for i in range(length_of_list):
 				random_integer = random.randint(0, len(list_of_available_values) - 1)
 				random_value_from_list = list_of_available_values[random_integer]
 				random_list.append(random_value_from_list)
-				length_of_list -= 1
 			print("Wylosowana tablica: " + str(random_list))
 			average = statistics.mean(random_list)
 			minimum = min(random_list)
